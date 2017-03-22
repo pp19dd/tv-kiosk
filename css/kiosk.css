@@ -1,0 +1,105 @@
+/* voa tv kiosk stylesheet */
+
+body {
+	background: #444;
+}
+
+#page-header {
+	background: #1330bf;
+	color: #fff;
+}
+
+.inner {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+#playing {
+	background: #444;
+	color: #eee;
+}
+
+#listings {
+	background: #eee;
+}
+
+footer {
+	background: #ccc;
+}
+
+
+.category {
+	background: #d41010;
+	border-bottom: 1px solid #eee;
+	color: #fff;
+	padding: 1em;
+}
+
+.video {
+	padding-bottom: 2em;
+}
+
+.video:nth-child(1n+2) {
+	border-top: 1px solid #ddd;
+	padding-top: 2em;
+}
+
+.video > a {
+	text-decoration: none;
+}
+
+.video > a > img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.video > a > h3,
+.video > a > p {
+	padding: 0 1em;
+}
+
+.video > a > h3 {
+	font-weight: bold;
+}
+
+
+
+@media (min-width: 750px) {
+
+	#page-header {
+		height: 5vh;
+	}
+
+	#playing {
+		float: right;
+		height: 90vh;
+		width: 70%;
+	}
+
+	#listings {
+		height: 90vh;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		width: 30%;
+	}
+
+	footer {
+		height: 5vh;
+	}
+
+}
+
+
+
+@media (min-width: 1000px) {
+	#playing { width: 75%; }
+	#listings { width: 25%; }
+}
+
+
+
+@media (min-width: 1200px) {
+	#playing { width: 80%; }
+	#listings { width: 20%; }
+}
