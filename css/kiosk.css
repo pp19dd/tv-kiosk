@@ -30,7 +30,6 @@ footer {
 	background: #ccc;
 }
 
-
 .category {
 	background: #d41010;
 	color: #fff;
@@ -44,43 +43,76 @@ footer {
 	position: relative;
 }
 
-/*.video:nth-child(1n+2) {
-	border-top: 1px solid #ddd;
-	padding-top: 2rem;
-}*/
-
 .video a {
 	text-decoration: none;
 }
 
-.video a img {
+.video a .video-still {
+	background: #444;
 	border-top: 1px solid #ddd;
+	overflow: hidden;
+	z-index: 10;
+}
+
+.video a .video-still img {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 	display: block;
 	height: auto;
 	width: 100%;
-}
-
-.video .details {
-	display: block;
-	margin: 0 1rem;
-	position: relative;
-	top: -1.5rem;
+	z-index: 20;
+	
+	transform: translate3d(0,0,0);
+	transition: opacity .5s, transform 1s
 }
 
 .video a h3 {
 	background: #fff;
 	border: 1px solid #ddd;
 	color: #333;
-	font-weight: bold;
+	display: block;
 	line-height: 125%;
+	margin: 0 1rem;
+	position: relative;
+	top: 1rem;
 	padding: .5rem;
+	z-index: 30;
+	
+	transition: background-color .3s, color .3s;
 }
 
-.video a p {
-	color: #666;
+.video a .description {
+	border-bottom: 6px solid #1330bf;
+	bottom: 0;
+	color: #eee;
+	display: block;
 	font-size: .9em;
 	line-height: 130%;
-	margin: .5rem calc(0.5rem + 1px);
+	margin: 0;
+	opacity: 0;
+	padding: 0 1rem .5em 1rem;
+	position: absolute;
+	width: calc(100% - 2rem);
+	z-index: 30;
+	
+	transition: opacity .5s;
+}
+
+.video a:hover h3 {
+	background-color: #1330bf;
+	color: #fff;
+	transition: background-color .3s, color .3s;
+}
+
+.video a:hover .video-still img {
+	opacity: 0.4;
+	transform: scale3d(1.1,1.1,1);
+	transition: opacity .5s, transform 1s
+}
+
+.video a:hover .description {
+	opacity: 1;
+	transition: opacity .5s;
 }
 
 
@@ -114,19 +146,25 @@ footer {
 	footer {
 		min-height: 5vh;
 	}
+	
+	.video a .description { font-size: .8em; }
 
 }
 
 
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
 	#playing { width: 75%; }
 	#listings { width: 25%; }
 }
 
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
 	#playing { width: 80%; }
 	#listings { width: 20%; }
+}
+
+@media (min-width: 1600px) {
+	.video a .description { font-size: .9em; }
 }
