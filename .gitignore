@@ -1,3 +1,5 @@
 config.php
 vendor/*
 data.json
+
+.DS_Store

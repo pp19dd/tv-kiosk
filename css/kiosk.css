@@ -1,7 +1,10 @@
 /* voa tv kiosk stylesheet */
 
+html { font-size: 100%; }
+
 body {
 	background: #444;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 #page-header {
@@ -30,38 +33,57 @@ footer {
 
 .category {
 	background: #d41010;
-	border-bottom: 1px solid #eee;
 	color: #fff;
-	padding: 1em;
+	line-height: 125%;
+	padding: 1rem;
+	text-transform: uppercase;
 }
 
 .video {
-	padding-bottom: 2em;
+	margin-bottom: 3rem;
+	position: relative;
 }
 
-.video:nth-child(1n+2) {
+/*.video:nth-child(1n+2) {
 	border-top: 1px solid #ddd;
-	padding-top: 2em;
-}
+	padding-top: 2rem;
+}*/
 
-.video > a {
+.video a {
 	text-decoration: none;
 }
 
-.video > a > img {
+.video a img {
+	border-top: 1px solid #ddd;
 	display: block;
 	height: auto;
 	width: 100%;
 }
 
-.video > a > h3,
-.video > a > p {
-	padding: 0 1em;
+.video .details {
+	display: block;
+	margin: 0 1rem;
+	position: relative;
+	top: -1.5rem;
 }
 
-.video > a > h3 {
+.video a h3 {
+	background: #fff;
+	border: 1px solid #ddd;
+	color: #333;
 	font-weight: bold;
+	line-height: 125%;
+	padding: .5rem;
 }
+
+.video a p {
+	color: #666;
+	font-size: .9em;
+	line-height: 130%;
+	margin: .5rem calc(0.5rem + 1px);
+}
+
+
 
 
 

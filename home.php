@@ -34,9 +34,12 @@ $all_videos = get_feed();
 
             <li class="video">
                 <a href="<?php echo $video->Link ?>">
-                <img src="<?php echo pangea_image( $video->Image, 300 ); ?>" />
-                <h3><?php echo $video->Title ?></h3>
-                <p><?php echo $video->Description ?></p>
+                    <img src="<?php echo pangea_image( $video->Image, 300 ); ?>" />
+                    
+                    <section class="details">
+                        <h3><?php echo $video->Title ?></h3>
+                        <p><?php echo $video->Description ?></p>
+                    </section>
                 </a>
             </li>
 
