@@ -90,24 +90,29 @@ footer {
 @media (min-width: 750px) {
 
 	#page-header {
-		height: 5vh;
+		height: 80px;
 	}
 
+	main { 
+		height: calc(100vh - 80px - 5vh); /* height = 100% viewport - header - footer */ 
+		overflow: hidden;
+	}
+	
 	#playing {
 		float: right;
-		height: 90vh;
+		height: 100%;
 		width: 70%;
 	}
 
 	#listings {
-		height: 90vh;
+		height: 100%;
 		overflow-x: hidden;
 		overflow-y: scroll;
 		width: 30%;
 	}
 
 	footer {
-		height: 5vh;
+		min-height: 5vh;
 	}
 
 }
