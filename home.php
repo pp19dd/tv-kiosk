@@ -9,6 +9,8 @@ $all_videos = get_feed();
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/kiosk.css" />
+    <script src="jukebox.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
 
@@ -17,29 +19,29 @@ $all_videos = get_feed();
             <h1><a rel="home" href="http://www.voanews.com/">VOA</a></h1>
         </div>
     </header>
-    
-    
-    
+
+
+
     <main id="main" class="inner">
 
         <section id="playing">
             <section class="player">
-                
-                <?php 
-                // grabs a random video to display
-                $all_cat = array_keys($all_videos);
-                shuffle($all_cat);
-                $any_vid = $all_videos[$all_cat[0]][0];
-                ?>
-                
+
+<?php
+// grabs a random video to display
+$all_cat = array_keys($all_videos);
+shuffle($all_cat);
+$any_vid = $all_videos[$all_cat[0]][0];
+?>
+
                 <div class="video-wrapper"><iframe src="<?php echo $any_vid->embed_url; ?>" width="640" height="363"></iframe></div>
-                
+
                 <h1><?php echo $any_vid->Title; ?></h1>
                 <p><?php echo $any_vid->Description; ?></p>
-                
+
             </section>
         </section>
-        
+
         <section id="listings">
 
             <?php foreach( $all_videos as $category => $videos ) { ?>
@@ -63,14 +65,22 @@ $all_videos = get_feed();
             </ul>
 
             <?php } #categories ?>
-        
+
         </section>
 
     </main>
-    
-    
-    
+
+
+
     <footer>VOA footer...</footer>
+
+<script>
+var all_videos = <?php echo json_encode($all_videos); ?>;
+
+jQuery(document).ready(function() {
+    jukebox_init(all_videos);
+});
+</script>
 
 </body>
 </html>
