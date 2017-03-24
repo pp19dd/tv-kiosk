@@ -11,6 +11,7 @@ $all_videos = get_feed();
     <link rel="stylesheet" type="text/css" href="css/kiosk.css" />
     <script src="jukebox.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro:400,600" rel="stylesheet" />
 </head>
 <body>
 
@@ -45,7 +46,7 @@ $any_vid = $all_videos[$all_cat[0]][0];
         <section id="listings">
 
             <?php foreach( $all_videos as $category => $videos ) { ?>
-            <h2 class="category"><?php echo $category ?></h2>
+            <!-- <h2 class="category"><?php echo $category ?></h2> -->
 
             <ul class="videos">
             <?php foreach( $videos as $video ) { ?>
