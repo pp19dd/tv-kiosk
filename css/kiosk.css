@@ -5,7 +5,7 @@ html { font-size: 100%; }
 body {
 	background: #444;
 	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-	font-weight: 400;
+	font-weight: 300;
 }
 
 #page-header {
@@ -79,7 +79,7 @@ footer {
 	border: 1px solid #ddd;
 	color: #333;
 	display: block;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 125%;
 	margin: 0 1rem;
 	position: relative;
@@ -95,7 +95,6 @@ footer {
 	bottom: 0;
 	color: #eee;
 	display: block;
-	font-family: 'Lora', serif;
 	font-size: .9em;
 	line-height: 130%;
 	margin: 0;
@@ -155,13 +154,12 @@ footer {
 
 #playing h1 {
 	font-size: 2em;
-	font-weight: 600;
+	font-weight: 200;
 	margin-bottom: .5em;
 }
 
 #playing p {
 	color: #ddd;
-	font-family: 'Lora', serif;
 	font-size: 1em;
 	line-height: 135%;
 }
