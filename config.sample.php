@@ -1,5 +1,7 @@
 <?php
 
+define( "VERSION", 1 );
+
 // live mode
 define( "FEED", "http://example.com/json" );
 

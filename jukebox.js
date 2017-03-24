@@ -21,9 +21,16 @@ function jukebox_play_video(video_id, video_data) {
     $("li.video").removeClass("playing-currently");
     $("li#v" + video_id).addClass("playing-currently");
 
-    $("#playing h1").html( video_data.Title );
-    $("#playing p").html( video_data.Description );
-    $("#playing .video-wrapper").html(
-        '<iframe src="' + video_data.embed_url + '" width="640" height="363"></iframe>'
-    );
+    $("#playing").animate({ opacity: 0}, 500, function() {
+
+        $("#playing h1").html( video_data.Title );
+        $("#playing p").html( video_data.Description );
+        $("#playing .video-wrapper").html(
+            '<iframe frameborder="0" src="' +
+            video_data.embed_url +
+            '" width="640" height="380"></iframe>'
+        );
+
+        $("#playing").animate({ opacity: 1}, 500);
+    });
 }
