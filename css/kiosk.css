@@ -11,9 +11,13 @@ body {
 #page-header {
 	background: #1330bf;
 	color: #eee;
+}
+
+#page-header .inner {
 	background-image: url(http://projects.voanews.com/south-china-sea/img/icons/icon__logo__voa--f8f8f8.png);
 	background-repeat: no-repeat;
 	background-position: 10px 10px;
+	height: 80px;
 }
 
 .inner {
